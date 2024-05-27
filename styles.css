@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-l-pink: hsl(275, 100%, 97%);
+    --color-grayish-purp: hsl(292, 16%, 49%);
+    --color-dark-purp: hsl(292, 42%, 14%);
+    --color-pinkish-purp: #AD28EB;
+
+    --sm-mg: 12px;
+    --md-mg: 25px;
+    --lg-mg: 40px;
+
+    --round-border: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-l-pink);
+    padding: var(--md-mg);
+}
+
+#background-image {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+
+main {
+    max-width: 700px;
+    min-height: 400px;
+    max-height: max-content;
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
+    padding: var(--lg-mg);
+    border-radius: var(--round-border);
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 3.2rem;
+    gap: var(--md-mg);
+    color: var(--color-dark-purp);
+    margin-bottom: var(--lg-mg);
+}
+
+.main-faq {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    height: 150px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.faq-item:nth-of-type(3) {
+    height: 120px;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: calc(var(--sm-mg) + 8px);
+}
+
+.faq-item.hidden {
+    height: 50px;
+}
+
+.faq-item.hidden .faq-description {
+    opacity: 0;
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: calc(var(--sm-mg) + 8px);
+}
+
+.faq-header-title {
+    font-size: 1.1rem;
+    color: var(--color-dark-purp);
+}
+
+.faq-header-title:hover,
+.faq-header img:hover {
+    color: var(--color-pinkish-purp);
+    cursor: pointer;
+}
+
+.faq-description {
+    display: inline-block;
+    color: var(--color-grayish-purp);
+    line-height: 25px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* @media screen and (max-width: 630px) {
+    .main-header {
+        margin-bottom: var(--md-mg);
+    }
+
+    .main-header span {
+        font-size: 2.5rem;
+    }
+
+    .faq-header-title {
+        margin-right: var(--md-mg);
+    }
+
+    .faq-item:nth-of-type(1) {
+        height: 175px;
+    }
+
+    .faq-item.hidden {
+        height: 80px;
+    }
+
+    
+} */
